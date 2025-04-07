@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_PATH" value="${LOG_PATH:-logs}"/>
+    <property name="LOG_FILE" value="${LOG_FILE:-application}"/>
+    <property name="LOG_LEVEL" value="${LOG_LEVEL:-INFO}"/>
+
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${LOG_FILE}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/${LOG_FILE}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>50MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Async Appender -->
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>1024</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+        <includeCallerData>true</includeCallerData>
+        <appender-ref ref="FILE"/>
+    </appender>
+
+    <!-- ControllerLoggingAspectOrg -->
+    <logger name="CONTROLLER_LOGGER" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC"/>
+    </logger>
+    <!-- ControllerLoggingAspectOrg -->
+    <logger name="CONTROLLER_ERROR_LOGGER" level="ERROR" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC"/>
+    </logger>
+
+    <logger name="SQL_LOGGER" level="DEBUG" additivity="false">
+        <appender-ref ref="SQL_CONSOLE"/>
+        <appender-ref ref="SQL_FILE"/>
+    </logger>
+
+    <logger name="SLOW_SQL_LOGGER" level="WARN" additivity="false">
+        <appender-ref ref="SQL_CONSOLE"/>
+        <appender-ref ref="SQL_FILE"/>
+    </logger>
+
+    <!-- 专用于SQL日志的appender -->
+    <appender name="SQL_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <appender name="SQL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/sql.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/sql-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>50MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logger Levels -->
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="com.example" level="DEBUG"/>
+    <logger name="SQL_LOGGER" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC"/>
+    </logger>
+
+    <!-- Root Logger -->
+    <root level="${LOG_LEVEL}">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC"/>
+    </root>
+</configuration>

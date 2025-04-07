@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: springboot-log-demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # ??????????
+#    aop:
+#      auto: true
+#      proxy-target-class: true
+
+# for ControllerLoggingAspectOrg LoggingProperties
+logging:
+  controller:
+    enabled: true
+    include-error-stacktrace: true
+    excluded-headers:
+      - authorization
+      - cookie
+      - set-cookie
+    excluded-parameter-types:
+      - org.springframework.ui.Model
+      - org.springframework.validation.BindingResult
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # for org
+  logging:
+    enabled: true
+    slow-query-threshold: 500  # ?????(ms)
+    show-results: true
+    show-params: true
+    max-result-length: 1000
+    excluded-sql-ids:  # ????????SQL ID
+      - com.example.mapper.ConfigMapper.selectSystemConfig
