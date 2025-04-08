@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SpringOne2023峰会总结-02-SpringBoot与Micrometer如何在WebFlux环境下实现的链路日志
+https://cloud.tencent.com/developer/article/2421124
+
+-->
+<configuration>
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>TRACE</level>
+            <onMatch>DENY</onMatch>
+        </filter>
+        <Target>System.out</Target>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy/MM/dd HH:mm:ss} [%-5p] %X{customerId} %X{sessionId} %c - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <logger name="freemarker" level="OFF" />
+
+    <root>
+        <level value="debug" />
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- logdb用出力ファイル -->
+
+    <!-- logdb_error -->
+    <appender name="logdbErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/path1/logdb/error.log</file>
+        <append>true</append>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/path1/logdb/error.%d{yyyyMMdd}.log</fileNamePattern>
+            <maxHistory>99</maxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <logger name="logdbError" level="INFO">
+        <appender-ref ref="logdbErrorFile" />
+    </logger>
+
+</configuration>
