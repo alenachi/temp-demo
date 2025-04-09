@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 import java.net.http.HttpResponse;
 
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/api/test1")
 public class TestController {
 
     private final TestService testService;
@@ -31,7 +31,7 @@ public class TestController {
         return testService.processTest();
     }
 
-    @GetMapping("web")
+    @GetMapping("/web")
     public String testWeb(@RequestParam String userid){
         return "ok";
     }

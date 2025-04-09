@@ -1,6 +1,5 @@
 package com.akira.springbootlogdemo.logging.config;
 
-import com.akira.springbootlogdemo.logging.mybatis.SqlLoggingInterceptorOrg;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
