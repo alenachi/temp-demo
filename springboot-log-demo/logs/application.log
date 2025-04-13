@@ -1,452 +1,113 @@
-2025-04-10 05:45:51.265 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 9712 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 05:45:51.267 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 05:45:52.283 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 05:45:53.526 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:45:53.528 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 05:45:53.529 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 05:45:53.578 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 05:45:54.680 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:45:54.703 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 4.077 seconds (process running for 5.536)
-2025-04-10 05:46:36.720 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 05:46:36.842 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"a6d4a34c-9b47-4266-b661-dee0744d8f01","type":"REQUEST","method":"testEndpoint","path":"/api/test","class":"TestController","headers":null,"params":[],"queryParams":null}
-2025-04-10 05:46:36.842 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 05:46:36.980 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"a6d4a34c-9b47-4266-b661-dee0744d8f01","type":"RESPONSE","method":"GET","path":"/api/test","duration":"3ms","response":"\"Test response\""}
-2025-04-10 05:46:36.996 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - API Request-Response: {method=GET, uri=/api/test, query=null, headers={user-agent=PostmanRuntime/7.43.3, accept=*/*, postman-token=3becca29-c510-4724-9d8c-5caad9a70fd2, host=localhost:8080, accept-encoding=gzip, deflate, br, connection=keep-alive}, status=200, latency=264ms, responseHeaders={}}
-2025-04-10 05:47:13.477 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingFilter - API Request-Response: {method=GET, uri=/api, query=null, headers={user-agent=PostmanRuntime/7.43.3, accept=*/*, postman-token=3a286af8-fce4-412b-8682-33f08f5c7497, host=localhost:8080, accept-encoding=gzip, deflate, br, connection=keep-alive}, status=404, latency=12ms, responseHeaders={Vary=Origin}}
-2025-04-10 05:47:26.004 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userid' for method parameter type String is not present]
-2025-04-10 05:47:26.006 [http-nio-8080-exec-4] INFO  c.a.s.l.filter.ApiLoggingFilter - API Request-Response: {method=GET, uri=/api/test/web, query=null, headers={user-agent=PostmanRuntime/7.43.3, accept=*/*, postman-token=f38c2535-7544-409a-a16d-5dbc1a77f5bf, host=localhost:8080, accept-encoding=gzip, deflate, br, connection=keep-alive}, status=400, latency=9ms, responseHeaders={}}
-2025-04-10 05:51:33.330 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 10433 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 05:51:33.332 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 05:51:34.063 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 05:51:35.002 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:51:35.004 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 05:51:35.004 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 05:51:35.054 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 05:51:36.144 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:51:36.166 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.369 seconds (process running for 4.363)
-2025-04-10 05:52:07.877 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 05:52:07.928 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - API Request-Response: {method=GET, uri=//api/test/hello/abc, query=null, headers={user-agent=PostmanRuntime/7.43.3, accept=*/*, postman-token=acbb6b71-d975-46b6-af69-f1f5370cff5f, host=localhost:8080, accept-encoding=gzip, deflate, br, connection=keep-alive}, status=404, latency=42ms, responseHeaders={Vary=Origin}}
-2025-04-10 05:52:14.227 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"cdf9f288-65e6-4dcf-81be-02ab35049b97","type":"REQUEST","method":"helloPath","path":"/api/test/hello/{name}","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"abc"}],"queryParams":null}
-2025-04-10 05:52:14.228 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 05:52:14.229 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"cdf9f288-65e6-4dcf-81be-02ab35049b97","type":"RESPONSE","method":"GET","path":"/api/test/hello/{name}","duration":"0ms","response":"\"Hello, abc! (路径参数)\""}
-2025-04-10 05:52:14.232 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingFilter - API Request-Response: {method=GET, uri=/api/test/hello/abc, query=null, headers={user-agent=PostmanRuntime/7.43.3, accept=*/*, postman-token=51edb91a-056b-4735-9538-68f75ab97909, host=localhost:8080, accept-encoding=gzip, deflate, br, connection=keep-alive}, status=200, latency=49ms, responseHeaders={Content-Length=26}}
-2025-04-10 05:53:27.705 [http-nio-8080-exec-6] INFO  CONTROLLER_LOGGER - {"traceId":"55da92fd-69eb-459a-94c8-43ab98d23cae","type":"REQUEST","method":"greetQuery","path":"/api/test/greet","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"李四"},{"name":"age","type":"int","value":30}],"queryParams":null}
-2025-04-10 05:53:27.705 [http-nio-8080-exec-6] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 05:53:27.707 [http-nio-8080-exec-6] INFO  CONTROLLER_LOGGER - {"traceId":"55da92fd-69eb-459a-94c8-43ab98d23cae","type":"RESPONSE","method":"GET","path":"/api/test/greet","duration":"1ms","response":"\"Hello, 李四! You are 30 years old. (查询参数)\""}
-2025-04-10 05:53:27.709 [http-nio-8080-exec-6] INFO  c.a.s.l.filter.ApiLoggingFilter - API Request-Response: {method=GET, uri=/api/test/greet, query=name=%E6%9D%8E%E5%9B%9B&age=30, headers={user-agent=PostmanRuntime/7.43.3, accept=*/*, postman-token=a01ac312-aa4b-4aca-9804-f1a2b7cbb2f2, host=localhost:8080, accept-encoding=gzip, deflate, br, connection=keep-alive}, status=200, latency=7ms, responseHeaders={Content-Length=51}}
-2025-04-10 05:55:04.074 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 10810 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 05:55:04.075 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 05:55:04.753 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 05:55:05.663 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:55:05.665 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 05:55:05.665 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 05:55:05.715 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 05:55:06.711 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:55:06.732 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.206 seconds (process running for 4.006)
-2025-04-10 05:55:18.926 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 05:55:19.037 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"23286731-fe58-482c-a11c-57bcad322bc5","type":"REQUEST","method":"greetQuery","path":"/api/test/greet","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"李四"},{"name":"age","type":"int","value":30}],"queryParams":null}
-2025-04-10 05:55:19.038 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 05:55:19.039 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"23286731-fe58-482c-a11c-57bcad322bc5","type":"RESPONSE","method":"GET","path":"/api/test/greet","duration":"0ms","response":"\"Hello, 李四! You are 30 years old. (查询参数)\""}
-2025-04-10 05:55:19.056 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - API Request-Response: {method=GET, uri=/api/test/greet, query=name=%E6%9D%8E%E5%9B%9B&age=30, protocol=http, status=200, latency=122ms, responseHeaders={Content-Length=51}}
-2025-04-10 05:56:02.293 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 10922 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 05:56:02.295 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 05:56:03.125 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 05:56:03.997 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:56:03.998 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 05:56:03.998 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 05:56:04.046 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 05:56:05.096 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 05:56:05.116 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.492 seconds (process running for 4.568)
-2025-04-10 06:08:00.835 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 12207 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 06:08:00.839 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 06:08:01.837 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 06:08:02.667 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:08:02.669 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 06:08:02.669 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 06:08:02.716 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 06:08:03.965 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:08:03.985 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.805 seconds (process running for 4.921)
-2025-04-10 06:13:29.848 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 06:13:29.900 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=404, latency=43ms}
-2025-04-10 06:13:36.913 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"b09c431c-28e7-401a-a105-07661788a3e3","type":"REQUEST","method":"helloPath","path":"/api/test/hello/{name}","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"123"}],"queryParams":null}
-2025-04-10 06:13:36.913 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:13:36.914 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"b09c431c-28e7-401a-a105-07661788a3e3","type":"RESPONSE","method":"GET","path":"/api/test/hello/{name}","duration":"0ms","response":"\"Hello, 123! (路径参数)\""}
-2025-04-10 06:13:36.916 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=42ms}
-2025-04-10 06:14:00.855 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"0e6cd6a9-fde7-46f4-8025-8955fcfb60d5","type":"REQUEST","method":"helloPath","path":"/api/test/hello/{name}","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"123"}],"queryParams":null}
-2025-04-10 06:14:00.855 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:14:00.856 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"0e6cd6a9-fde7-46f4-8025-8955fcfb60d5","type":"RESPONSE","method":"GET","path":"/api/test/hello/{name}","duration":"0ms","response":"\"Hello, 123! (路径参数)\""}
-2025-04-10 06:14:00.857 [http-nio-8080-exec-4] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=3ms}
-2025-04-10 06:14:41.044 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 12958 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 06:14:41.046 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 06:14:41.691 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 06:14:42.573 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:14:42.575 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 06:14:42.575 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 06:14:42.620 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 06:14:43.618 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:14:43.637 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.119 seconds (process running for 4.098)
-2025-04-10 06:14:49.243 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 06:14:49.251 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=GET, uri=/api/test/hello/123, query=null, protocol=http}
-2025-04-10 06:14:49.323 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"b8989fb9-1fbc-4764-97e0-fa91d32e5ff6","type":"REQUEST","method":"helloPath","path":"/api/test/hello/{name}","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"123"}],"queryParams":null}
-2025-04-10 06:14:49.324 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:14:49.326 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"b8989fb9-1fbc-4764-97e0-fa91d32e5ff6","type":"RESPONSE","method":"GET","path":"/api/test/hello/{name}","duration":"0ms","response":"\"Hello, 123! (路径参数)\""}
-2025-04-10 06:14:49.335 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=86ms}
-2025-04-10 06:15:11.227 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=GET, uri=/api/test/greet, query=name=%E6%9D%8E%E5%9B%9B&age=30, protocol=http}
-2025-04-10 06:15:11.232 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"013fa29c-862f-4555-af3e-b0345e028319","type":"REQUEST","method":"greetQuery","path":"/api/test/greet","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"李四"},{"name":"age","type":"int","value":30}],"queryParams":null}
-2025-04-10 06:15:11.232 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:15:11.233 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"013fa29c-862f-4555-af3e-b0345e028319","type":"RESPONSE","method":"GET","path":"/api/test/greet","duration":"0ms","response":"\"Hello, 李四! You are 30 years old. (查询参数)\""}
-2025-04-10 06:15:11.233 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=6ms}
-2025-04-10 06:15:38.270 [http-nio-8080-exec-4] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=GET, uri=/api/test/user, query=null, protocol=http}
-2025-04-10 06:15:38.271 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"f2d77ab9-7c51-4906-b096-b182e2996546","type":"REQUEST","method":"getUser","path":"/api/test/user","class":"TestController2","headers":null,"params":[],"queryParams":null}
-2025-04-10 06:15:38.272 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:15:38.276 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"f2d77ab9-7c51-4906-b096-b182e2996546","type":"RESPONSE","method":"GET","path":"/api/test/user","duration":"0ms","response":"{\"name\":\"张三\",\"email\":\"zhangsan@example.com\",\"age\":25}"}
-2025-04-10 06:15:38.284 [http-nio-8080-exec-4] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=13ms, responseBody={"name":"张三","email":"zhangsan@example.com","age":25}}
-2025-04-10 06:16:49.786 [http-nio-8080-exec-7] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/form, query=null, protocol=http, body=[empty]}
-2025-04-10 06:16:49.795 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'username' for method parameter type String is not present]
-2025-04-10 06:16:49.795 [http-nio-8080-exec-7] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=400, latency=8ms}
-2025-04-10 06:17:20.321 [http-nio-8080-exec-9] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/form, query=null, protocol=http, body=[empty]}
-2025-04-10 06:17:20.350 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------703960219708991120834462' is not supported]
-2025-04-10 06:17:20.350 [http-nio-8080-exec-9] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=415, latency=29ms}
-2025-04-10 06:17:56.294 [http-nio-8080-exec-10] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/form, query=null, protocol=http, body=[empty]}
-2025-04-10 06:17:56.296 [http-nio-8080-exec-10] INFO  CONTROLLER_LOGGER - {"traceId":"8033fd07-36e8-4a64-8618-bf812178e165","type":"REQUEST","method":"handleForm","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"username","type":"String","value":"admin"},{"name":"password","type":"String","value":"12345"}],"queryParams":null}
-2025-04-10 06:17:56.297 [http-nio-8080-exec-10] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:17:56.297 [http-nio-8080-exec-10] INFO  CONTROLLER_LOGGER - {"traceId":"8033fd07-36e8-4a64-8618-bf812178e165","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"\"Received form: username=admin, password=12345\""}
-2025-04-10 06:17:56.297 [http-nio-8080-exec-10] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=3ms}
-2025-04-10 06:21:09.905 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/json, query=null, protocol=http, body=[empty]}
-2025-04-10 06:21:09.906 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/x-www-form-urlencoded' is not supported]
-2025-04-10 06:21:09.906 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=415, latency=1ms}
-2025-04-10 06:21:49.111 [http-nio-8080-exec-4] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/json, query=null, protocol=http, body=[empty]}
-2025-04-10 06:21:49.169 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"459390f3-0480-470c-b20f-b4a5f8289ecd","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 06:21:49.169 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:21:49.169 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"459390f3-0480-470c-b20f-b4a5f8289ecd","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 06:21:49.170 [http-nio-8080-exec-4] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=59ms, responseBody={"name":"[Processed] 王五","email":"wangwu@test.com","age":28}}
-2025-04-10 06:27:25.362 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 14281 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 06:27:25.364 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 06:27:26.027 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 06:27:26.842 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:27:26.843 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 06:27:26.844 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 06:27:26.888 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 06:27:27.865 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:27:27.887 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.048 seconds (process running for 4.281)
-2025-04-10 06:27:31.850 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 06:27:31.859 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - org.apache.catalina.util.ParameterMap@4921b05d
-2025-04-10 06:27:31.859 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/json, query=null, protocol=http, body=[empty]}
-2025-04-10 06:27:32.316 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"f5405285-b3f1-40af-a100-cd34ae48956f","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 06:27:32.316 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:27:32.318 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"f5405285-b3f1-40af-a100-cd34ae48956f","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 06:27:32.330 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=473ms, responseBody={"name":"[Processed] 王五","email":"wangwu@test.com","age":28}}
-2025-04-10 06:28:13.807 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 14370 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 06:28:13.809 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 06:28:14.854 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 06:28:16.027 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:28:16.029 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 06:28:16.030 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 06:28:16.093 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 06:28:17.815 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:28:17.841 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 4.831 seconds (process running for 6.823)
-2025-04-10 06:28:22.840 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 06:29:28.954 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - org.apache.catalina.util.ParameterMap@76e32341
-2025-04-10 06:29:28.954 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/json, query=null, protocol=http, body=[empty]}
-2025-04-10 06:29:29.376 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"a05ce400-5874-4d80-ae30-9273a89567af","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 06:29:29.376 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:29:29.386 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"a05ce400-5874-4d80-ae30-9273a89567af","type":"RESPONSE","method":"POST","path":"/api/test","duration":"2ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 06:29:29.426 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=66579ms, responseBody={"name":"[Processed] 王五","email":"wangwu@test.com","age":28}}
-2025-04-10 06:30:00.250 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 14568 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 06:30:00.252 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 06:30:01.137 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 06:30:02.162 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:30:02.167 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 06:30:02.167 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 06:30:02.225 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 06:30:03.456 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 06:30:03.485 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.996 seconds (process running for 5.767)
-2025-04-10 06:30:08.817 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 06:30:42.972 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - org.apache.catalina.util.ParameterMap@4ee34605
-2025-04-10 06:30:42.973 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - [START] Request: {method=POST, uri=/api/test/json, query=null, protocol=http, body=[empty]}
-2025-04-10 06:30:43.195 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"5a7eef48-d7fd-42f0-b008-6d85cc48e256","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 06:30:43.196 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 06:30:43.198 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"5a7eef48-d7fd-42f0-b008-6d85cc48e256","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 06:30:43.211 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingFilter - [End  ] Response: {status=200, latency=34369ms, responseBody={"name":"[Processed] 王五","email":"wangwu@test.com","age":28}}
-2025-04-10 07:24:29.211 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 17984 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:24:29.215 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:24:29.733 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'loggingFilter' defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=filterConfig; factoryMethodName=loggingFilter; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class]] for bean 'loggingFilter' since there is already [Generic bean: class=com.akira.springbootlogdemo.logging.filter.LoggingFilter; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in file [/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main/com/akira/springbootlogdemo/logging/filter/LoggingFilter.class]] bound.
-2025-04-10 07:24:29.771 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'loggingFilter', defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class], could not be registered. A bean with that name has already been defined in file [/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main/com/akira/springbootlogdemo/logging/filter/LoggingFilter.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-2025-04-10 07:25:27.864 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 18097 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:25:27.866 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:25:28.573 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 07:25:29.715 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:25:29.717 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 07:25:29.717 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 07:25:29.775 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 07:25:30.878 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:25:30.902 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.631 seconds (process running for 5.007)
-2025-04-10 07:25:37.337 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 07:25:37.669 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"39933dc5-2d07-4b9a-b6ed-32edb682ba8e","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:25:37.670 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:25:37.671 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"39933dc5-2d07-4b9a-b6ed-32edb682ba8e","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:26:09.553 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"40be2350-b02a-4736-bfd4-8336b1c11f53","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:26:09.553 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:26:09.554 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"40be2350-b02a-4736-bfd4-8336b1c11f53","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:26:32.402 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"7b4cf1f8-b315-4ecf-9e5d-533417aa54c4","type":"REQUEST","method":"helloPath","path":"/api/test/hello/{name}","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"abc"}],"queryParams":null}
-2025-04-10 07:26:32.402 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:26:32.402 [http-nio-8080-exec-4] INFO  CONTROLLER_LOGGER - {"traceId":"7b4cf1f8-b315-4ecf-9e5d-533417aa54c4","type":"RESPONSE","method":"GET","path":"/api/test/hello/{name}","duration":"0ms","response":"\"Hello, abc! (路径参数)\""}
-2025-04-10 07:26:50.981 [http-nio-8080-exec-5] INFO  CONTROLLER_LOGGER - {"traceId":"37daaeef-fa25-433b-a20d-5c86a63b5e45","type":"REQUEST","method":"greetQuery","path":"/api/test/greet","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"李四"},{"name":"age","type":"int","value":30}],"queryParams":null}
-2025-04-10 07:26:50.981 [http-nio-8080-exec-5] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:26:50.982 [http-nio-8080-exec-5] INFO  CONTROLLER_LOGGER - {"traceId":"37daaeef-fa25-433b-a20d-5c86a63b5e45","type":"RESPONSE","method":"GET","path":"/api/test/greet","duration":"0ms","response":"\"Hello, 李四! You are 30 years old. (查询参数)\""}
-2025-04-10 07:27:04.453 [http-nio-8080-exec-6] INFO  CONTROLLER_LOGGER - {"traceId":"138e5b81-f9d3-4cfe-bc12-c0437d9f92d9","type":"REQUEST","method":"handleForm","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"username","type":"String","value":"admin"},{"name":"password","type":"String","value":"12345"}],"queryParams":null}
-2025-04-10 07:27:04.454 [http-nio-8080-exec-6] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:27:04.454 [http-nio-8080-exec-6] INFO  CONTROLLER_LOGGER - {"traceId":"138e5b81-f9d3-4cfe-bc12-c0437d9f92d9","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"\"Received form: username=admin, password=12345\""}
-2025-04-10 07:27:20.754 [http-nio-8080-exec-7] INFO  CONTROLLER_LOGGER - {"traceId":"4bb62d44-53af-4dc1-a8f6-3912975f4fde","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:27:20.754 [http-nio-8080-exec-7] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:27:20.756 [http-nio-8080-exec-7] INFO  CONTROLLER_LOGGER - {"traceId":"4bb62d44-53af-4dc1-a8f6-3912975f4fde","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:27:22.159 [http-nio-8080-exec-8] INFO  CONTROLLER_LOGGER - {"traceId":"243b308d-4af4-4718-bb95-fdeff7dd7a2b","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:27:22.159 [http-nio-8080-exec-8] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:27:22.160 [http-nio-8080-exec-8] INFO  CONTROLLER_LOGGER - {"traceId":"243b308d-4af4-4718-bb95-fdeff7dd7a2b","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:32:35.663 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 18885 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:32:35.665 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:32:36.167 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'apiLoggingJsonFilter' defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=filterConfig; factoryMethodName=apiLoggingJsonFilter; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class]] for bean 'apiLoggingJsonFilter' since there is already [Generic bean: class=com.akira.springbootlogdemo.logging.filter.ApiLoggingJsonFilter; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in file [/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main/com/akira/springbootlogdemo/logging/filter/ApiLoggingJsonFilter.class]] bound.
-2025-04-10 07:32:36.207 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'apiLoggingJsonFilter', defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class], could not be registered. A bean with that name has already been defined in file [/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main/com/akira/springbootlogdemo/logging/filter/ApiLoggingJsonFilter.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-2025-04-10 07:32:59.651 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 18932 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:32:59.653 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:33:00.092 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'apiLoggingJsonFilter' defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=filterConfig; factoryMethodName=apiLoggingJsonFilter; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class]] for bean 'apiLoggingJsonFilter' since there is already [Generic bean: class=com.akira.springbootlogdemo.logging.filter.ApiLoggingJsonFilter; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in file [/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main/com/akira/springbootlogdemo/logging/filter/ApiLoggingJsonFilter.class]] bound.
-2025-04-10 07:33:00.111 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'apiLoggingJsonFilter', defined in class path resource [com/akira/springbootlogdemo/logging/filter/FilterConfig.class], could not be registered. A bean with that name has already been defined in file [/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main/com/akira/springbootlogdemo/logging/filter/ApiLoggingJsonFilter.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-2025-04-10 07:33:41.771 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 19015 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:33:41.773 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:33:42.357 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 07:33:43.227 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:33:43.229 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 07:33:43.229 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 07:33:43.279 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 07:33:44.272 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:33:44.293 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 2.982 seconds (process running for 3.762)
-2025-04-10 07:33:52.960 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 07:33:53.115 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"9ef991d6-ad4d-4d53-bd26-61e3875732de","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:33:53.115 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:33:53.117 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"9ef991d6-ad4d-4d53-bd26-61e3875732de","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:33:53.130 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":159}
-2025-04-10 07:33:53.132 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":161}
-2025-04-10 07:34:32.394 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 19116 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:34:32.395 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:34:33.056 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 07:34:33.905 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:34:33.907 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 07:34:33.907 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 07:34:33.954 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 07:34:34.962 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:34:34.981 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.104 seconds (process running for 3.925)
-2025-04-10 07:34:41.365 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 07:34:41.496 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"d8dee2f8-3f48-4499-9b57-24c05c06612f","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:34:41.496 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:34:41.497 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"d8dee2f8-3f48-4499-9b57-24c05c06612f","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:34:41.511 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":135}
-2025-04-10 07:34:41.512 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":137}
-2025-04-10 07:40:31.967 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 19796 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:40:31.969 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:40:32.580 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 07:40:33.385 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:40:33.386 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 07:40:33.387 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 07:40:33.436 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 07:40:34.394 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:40:34.437 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 2.938 seconds (process running for 3.85)
-2025-04-10 07:40:46.061 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 07:40:46.294 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"ea797c35-3689-431b-abc6-1bc9c527f413","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:40:46.295 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:40:46.296 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"ea797c35-3689-431b-abc6-1bc9c527f413","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:40:46.311 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - API日志记录：
-{
+2025-04-11 07:42:49.558 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 34034 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
+2025-04-11 07:42:49.562 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-11 07:42:50.679 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
+2025-04-11 07:42:52.019 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-11 07:42:52.023 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-11 07:42:52.023 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-11 07:42:52.088 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-11 07:42:54.553 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-11 07:42:54.632 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 6.249 seconds (process running for 8.25)
+2025-04-11 07:43:05.741 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-11 07:43:21.082 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.akira.springbootlogdemo.controller.TestController2$User com.akira.springbootlogdemo.controller.TestController2.handleJson(com.akira.springbootlogdemo.controller.TestController2$User)]
+2025-04-11 07:43:21.135 [http-nio-8080-exec-1] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：{
   "请求方法" : "POST",
   "请求地址" : "/api/test/json",
   "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 238
+  "响应状态" : 400,
+  "响应体" : "",
+  "耗时(ms)" : 15328
 }
-2025-04-10 07:40:46.314 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":242}
-2025-04-10 07:40:46.314 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingFilter - API日志记录：
-{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 243
-}
-2025-04-10 07:40:46.314 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":243}
-2025-04-10 07:41:35.060 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 19921 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:41:35.062 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:41:35.718 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 07:41:36.605 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:41:36.607 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 07:41:36.607 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 07:41:36.657 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 07:41:37.678 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:41:37.704 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.114 seconds (process running for 4.336)
-2025-04-10 07:41:43.982 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 07:41:44.136 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"8128f7b0-e63e-425e-abb4-ef181b1f762c","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:41:44.137 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:41:44.140 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"8128f7b0-e63e-425e-abb4-ef181b1f762c","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:41:44.164 [http-nio-8080-exec-1] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：
-{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 167
-}
-2025-04-10 07:41:44.167 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":175}
-2025-04-10 07:41:44.168 [http-nio-8080-exec-1] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：
-{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 176
-}
-2025-04-10 07:41:44.168 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":176}
-2025-04-10 07:45:59.667 [http-nio-8080-exec-5] INFO  CONTROLLER_LOGGER - {"traceId":"883acdd7-9c8c-4c93-9f3f-7fbc737a4b89","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:45:59.669 [http-nio-8080-exec-5] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:45:59.669 [http-nio-8080-exec-5] INFO  CONTROLLER_LOGGER - {"traceId":"883acdd7-9c8c-4c93-9f3f-7fbc737a4b89","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:45:59.674 [http-nio-8080-exec-5] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：
-{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 18
-}
-2025-04-10 07:45:59.675 [http-nio-8080-exec-5] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":19}
-2025-04-10 07:45:59.676 [http-nio-8080-exec-5] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：
-{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 20
-}
-2025-04-10 07:45:59.676 [http-nio-8080-exec-5] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":20}
-2025-04-10 07:48:16.628 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 20796 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:48:16.630 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:48:17.268 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 07:48:18.103 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:48:18.104 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 07:48:18.105 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 07:48:18.152 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 07:48:19.133 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:48:19.152 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 3.016 seconds (process running for 3.858)
-2025-04-10 07:48:23.425 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 07:48:23.588 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"a259921c-bd80-4131-9f20-e1cd32d8730b","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:48:23.589 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:48:23.590 [http-nio-8080-exec-1] INFO  CONTROLLER_LOGGER - {"traceId":"a259921c-bd80-4131-9f20-e1cd32d8730b","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:48:23.604 [http-nio-8080-exec-1] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 170
-}
-2025-04-10 07:48:23.609 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":176}
-2025-04-10 07:48:23.610 [http-nio-8080-exec-1] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 178
-}
-2025-04-10 07:48:23.610 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":178}
-2025-04-10 07:50:04.975 [main] INFO  c.a.s.SpringbootLogDemoApplication - Starting SpringbootLogDemoApplication using Java 21.0.6 with PID 20989 (/usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo/build/classes/java/main started by kishoushou in /usr/local/workspaces/intellij_ws/temp-demo/springboot-log-demo)
-2025-04-10 07:50:04.977 [main] INFO  c.a.s.SpringbootLogDemoApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-10 07:50:05.520 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.akira.springbootlogdemo]' package. Please check your configuration.
-2025-04-10 07:50:06.172 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:50:06.174 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-10 07:50:06.174 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-10 07:50:06.211 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-04-10 07:50:07.043 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-10 07:50:07.070 [main] INFO  c.a.s.SpringbootLogDemoApplication - Started SpringbootLogDemoApplication in 2.628 seconds (process running for 3.21)
-2025-04-10 07:50:13.108 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-10 07:50:13.246 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"042eb0ad-a43a-40bb-a035-c5a57cfbd86c","type":"REQUEST","method":"handleJson","path":"/api/test","class":"TestController2","headers":null,"params":[{"name":"user","type":"User","value":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}],"queryParams":null}
-2025-04-10 07:50:13.247 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:50:13.248 [http-nio-8080-exec-2] INFO  CONTROLLER_LOGGER - {"traceId":"042eb0ad-a43a-40bb-a035-c5a57cfbd86c","type":"RESPONSE","method":"POST","path":"/api/test","duration":"0ms","response":"{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}"}
-2025-04-10 07:50:13.261 [http-nio-8080-exec-2] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 143
-}
-2025-04-10 07:50:13.263 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":146}
-2025-04-10 07:50:13.264 [http-nio-8080-exec-2] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：{
-  "请求方法" : "POST",
-  "请求地址" : "/api/test/json",
-  "请求体" : "{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "响应状态" : 200,
-  "响应体" : "{\"name\":\"[Processed] 王五\",\"email\":\"wangwu@test.com\",\"age\":28}",
-  "耗时(ms)" : 147
-}
-2025-04-10 07:50:13.264 [http-nio-8080-exec-2] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":200,"responseBody":"{\"name\":\"[Processed] çäº\",\"email\":\"wangwu@test.com\",\"age\":28}","durationMs":147}
-2025-04-10 07:50:24.468 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"ac82e0ee-3208-4b92-9e06-44cacca23552","type":"REQUEST","method":"greetQuery","path":"/api/test/greet","class":"TestController2","headers":null,"params":[{"name":"name","type":"String","value":"李四"},{"name":"age","type":"int","value":30}],"queryParams":null}
-2025-04-10 07:50:24.468 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - ===========================================1
-2025-04-10 07:50:24.468 [http-nio-8080-exec-3] INFO  CONTROLLER_LOGGER - {"traceId":"ac82e0ee-3208-4b92-9e06-44cacca23552","type":"RESPONSE","method":"GET","path":"/api/test/greet","duration":"0ms","response":"\"Hello, 李四! You are 30 years old. (查询参数)\""}
-2025-04-10 07:50:24.470 [http-nio-8080-exec-3] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：{
-  "请求方法" : "GET",
-  "请求地址" : "/api/test/greet?name=%E6%9D%8E%E5%9B%9B&age=30",
-  "响应状态" : 200,
-  "响应体" : "Hello, 李四! You are 30 years old. (查询参数)",
-  "耗时(ms)" : 9
-}
-2025-04-10 07:50:24.472 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"GET","uri":"/api/test/greet?name=%E6%9D%8E%E5%9B%9B&age=30","status":200,"responseBody":"Hello, 李四! You are 30 years old. (查询参数)","durationMs":10}
-2025-04-10 07:50:24.472 [http-nio-8080-exec-3] INFO  c.a.s.l.f.ApiLoggingJsonUtf8Filter - API日志记录：{
-  "请求方法" : "GET",
-  "请求地址" : "/api/test/greet?name=%E6%9D%8E%E5%9B%9B&age=30",
-  "响应状态" : 200,
-  "响应体" : "Hello, 李四! You are 30 years old. (查询参数)",
-  "耗时(ms)" : 11
-}
-2025-04-10 07:50:24.472 [http-nio-8080-exec-3] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"GET","uri":"/api/test/greet?name=%E6%9D%8E%E5%9B%9B&age=30","status":200,"responseBody":"Hello, 李四! You are 30 years old. (查询参数)","durationMs":11}
+2025-04-11 07:43:21.138 [http-nio-8080-exec-1] INFO  c.a.s.l.filter.ApiLoggingJsonFilter - API_LOG: {"method":"POST","uri":"/api/test/json","requestBody":"{\"name\":\"王五\",\"email\":\"wangwu@test.com\",\"age\":28}","status":400,"responseBody":"","durationMs":15381}
+2025-04-11 07:43:25.021 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+java.lang.IllegalStateException: getInputStream() has already been called for this request
+	at org.apache.catalina.connector.Request.getReader(Request.java:1135)
+	at org.apache.catalina.connector.RequestFacade.getReader(RequestFacade.java:392)
+	at jakarta.servlet.ServletRequestWrapper.getReader(ServletRequestWrapper.java:213)
+	at com.akira.springbootlogdemo.logging.aop.RequestHandlerinterceptor.preHandle(RequestHandlerinterceptor.java:17)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:633)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:331)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:380)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:208)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:151)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-11 07:43:25.025 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[Tomcat].[localhost] - Exception Processing [ErrorPage[errorCode=0, location=/error]]
+jakarta.servlet.ServletException: Request processing failed: java.lang.IllegalStateException: getInputStream() has already been called for this request
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:633)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:331)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:380)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:208)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:151)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: getInputStream() has already been called for this request
+	at org.apache.catalina.connector.Request.getReader(Request.java:1135)
+	at org.apache.catalina.connector.RequestFacade.getReader(RequestFacade.java:392)
+	at jakarta.servlet.ServletRequestWrapper.getReader(ServletRequestWrapper.java:213)
+	at com.akira.springbootlogdemo.logging.aop.RequestHandlerinterceptor.preHandle(RequestHandlerinterceptor.java:17)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	... 35 common frames omitted

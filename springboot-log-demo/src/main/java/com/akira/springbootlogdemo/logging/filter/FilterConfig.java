@@ -17,19 +17,19 @@ public class FilterConfig {
 //        return registration;
 //    }
 
-    @Bean
-    public FilterRegistrationBean<ApiLoggingJsonFilter> apiJsonLoggingFilter() {
-        FilterRegistrationBean<ApiLoggingJsonFilter> registration = new FilterRegistrationBean<ApiLoggingJsonFilter>();
-        registration.setFilter(new ApiLoggingJsonFilter());
-        // registration.setOrder(Ordered.HIGHEST_PRECEDENCE + 1);
-        return registration;
-    }
-    @Bean
-    public FilterRegistrationBean<ApiLoggingJsonUtf8Filter> apiJsonLoggingUtf8Filter() {
-        FilterRegistrationBean<ApiLoggingJsonUtf8Filter> registration = new FilterRegistrationBean<ApiLoggingJsonUtf8Filter>();
-        registration.setFilter(new ApiLoggingJsonUtf8Filter());
-        // registration.setOrder(Ordered.HIGHEST_PRECEDENCE + 1);
-        return registration;
-    }
+//    @Bean
+//    public FilterRegistrationBean<ApiLoggingJsonFilter> apiJsonLoggingFilter() {
+//        FilterRegistrationBean<ApiLoggingJsonFilter> registration = new FilterRegistrationBean<ApiLoggingJsonFilter>();
+//        registration.setFilter(new ApiLoggingJsonFilter());
+//        // registration.setOrder(Ordered.HIGHEST_PRECEDENCE + 1);
+//        return registration;
+//    }
+//    @Bean
+//    public FilterRegistrationBean<ApiLoggingJsonUtf8Filter> apiJsonLoggingUtf8Filter() {
+//        FilterRegistrationBean<ApiLoggingJsonUtf8Filter> registration = new FilterRegistrationBean<ApiLoggingJsonUtf8Filter>();
+//        registration.setFilter(new ApiLoggingJsonUtf8Filter());
+//        // registration.setOrder(Ordered.HIGHEST_PRECEDENCE + 1);
+//        return registration;
+//    }
 
 }
